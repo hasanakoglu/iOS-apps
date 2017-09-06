@@ -10,15 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var devLogo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        devLogo.layer.borderWidth = 1
+        devLogo.layer.masksToBounds = false
+        devLogo.layer.borderColor = UIColor.white.cgColor
+        devLogo.layer.cornerRadius = 8.0
+        devLogo.clipsToBounds = true
+       
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
+    
+    
 
 
 }
