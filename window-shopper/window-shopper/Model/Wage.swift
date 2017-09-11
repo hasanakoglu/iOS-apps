@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class Wage {
+    class func getHours(forWage wage: Double, andPrice price: Double) -> Int //forWage is parameter for auto complete and wage is for use.
+    {
+       return Int(ceil(price / wage)) //it will round up the answer
+        
+        
+    }
+    
+
+}
