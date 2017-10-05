@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9A18CA675F869E646AD63520765B6FC8C9221ACE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FC5DC368797D8E241FBD8D5F7436A0F7902E98CF" : 9223372036854775807,
+    "9A18CA675F869E646AD63520765B6FC8C9221ACE" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "58DDFBBA-B5AE-412B-9FCD-FD352AEFEB06",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FC5DC368797D8E241FBD8D5F7436A0F7902E98CF" : "",
+    "9A18CA675F869E646AD63520765B6FC8C9221ACE" : "app-pixelcity\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pixel-city",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "pixel-city.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:team-devslopes\/app-pixelcity.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9A18CA675F869E646AD63520765B6FC8C9221ACE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hasanakoglu\/iOS-apps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FC5DC368797D8E241FBD8D5F7436A0F7902E98CF"
+    }
+  ]
+}
