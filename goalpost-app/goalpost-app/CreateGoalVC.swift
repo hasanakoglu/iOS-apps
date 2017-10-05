@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CreateGoalVC.swift
 //  goalpost-app
 //
 //  Created by DevPair11 on 26/09/2017.
@@ -8,28 +8,50 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CreateGoalVC: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextbtn.bindToKeyboard()
+        shortTermBtn.setSelectedColor()
+        longTermBtn.setDeselectedColor()
+        goalTextView.delegate = self 
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var goalTextView: UITextView!
+    @IBOutlet weak var longTermBtn: UIButton!
+    @IBOutlet weak var shortTermBtn: UIButton!
+    @IBOutlet weak var nextbtn: UIButton!
+    
+    var goalType: GoalType = .shortTerm
+    
+    @IBAction func nextBtnWasPressed(_ sender: Any) {
+        if goalTextView.text != "" && goalTextView.text != "What is your goal?" {
+            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else {return}
+            finishGoalVC.initData(description: goalTextView.text!, type: goalType)
+         presentingViewController?.presentSecondaryDetail(viewControllerToPresent: finishGoalVC)
+            
+        }
+    }
+    @IBAction func shortTermBtnWasPressed(_ sender: Any) {
+        goalType = .shortTerm
+        shortTermBtn.setSelectedColor()
+        longTermBtn.setDeselectedColor()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func longTermBtnPressed(_ sender: Any) {
+        goalType = .longTerm
+        shortTermBtn.setDeselectedColor()
+        longTermBtn.setSelectedColor()
     }
-    */
-
+    
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+      dismissDetail()
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        goalTextView.text = ""
+        goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    }
 }
